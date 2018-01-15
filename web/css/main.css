@@ -1,0 +1,21 @@
+/*main.css*/
+
+h1 {
+    width: 50%;
+}
+
+article {
+    border: 1px black dashed;
+    border-radius: 5px;
+    margin: 25px;
+    padding: 20px;
+    /*background-color: #00897B;*/
+    box-shadow: 0px 5px 5px grey;
+}
+
+body {
+    border: 1px red dashed;
+    width: auto;
+    height: auto;
+
+}

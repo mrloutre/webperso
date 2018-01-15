@@ -1,0 +1,254 @@
+body {
+	font-family: 'Roboto', sans-serif !important;
+}
+
+.splitlayout {
+	top: 40px;
+	width: 100%;
+	height: 100%;
+}
+
+a:hover {
+	text-decoration: none !important;
+}
+
+
+/* Intro sides */
+
+.side {
+	position: fixed;
+	top: 40px;
+	z-index: 100;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	/* -webkit-backface-visibility: hidden; */
+}
+
+.side-right {
+	right: 0;
+	background: #fff;
+	color: #000000;
+	outline: 1px solid #fff;
+}
+
+
+/* Intro content, profile image*/
+
+.intro-content {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	padding: 0 1em;
+	width: 50%;
+	cursor: pointer;
+	-webkit-transform: translateY(-50%) translateX(-50%);
+	transform: translateY(-50%) translateX(-50%);
+}
+
+.pitch {
+	position: relative;
+	top: 50px;
+	width: 70%;
+	margin: auto;
+}
+
+.profile {
+	margin: 0 auto;
+	width: 140px;
+	height: 140px;
+	/* background: #58a5d1; */
+	-webkit-animation: fadeIn 1s;
+	animation: fadeIn 1s;
+}
+
+@-webkit-keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+.profile img {
+	max-width: 100%;
+	border-radius: 50%;
+	/* opacity: 0.9; */
+}
+
+.side-right .intro-content h1>span:nth-child(2):before {
+	background: #47a3da;
+}
+
+.back {
+	text-decoration: none;
+	top: 2.6em;
+	z-index: 2500;
+	display: block;
+	visibility: hidden;
+	width: 50px;
+	height: 50px;
+	text-align: center;
+	font-size: 22px;
+	line-height: 44px;
+	opacity: 0;
+	pointer-events: none;
+}
+
+.mobile-layout .back {
+	/* fixed positioning will make this not clickable after scrolling on some mobile devices */
+	position: absolute;
+}
+
+.back-left {
+	position: fixed;
+	left: 6%;
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
+	color: white;
+}
+
+
+/* affiche la fleche de retour */
+
+.open-right .back-left {
+	visibility: visible;
+	opacity: 1;
+	-webkit-transition-delay: 0.3s;
+	transition-delay: 0.3s;
+	pointer-events: auto;
+}
+
+.back:hover {
+	color: indianred;
+	-webkit-animation: moveBack 1s;
+	animation: moveBack 0.8s;
+	animation-iteration-count:infinite;
+}
+
+@-webkit-keyframes moveBack {
+	from {
+		left:8%;
+	}
+	to {
+		left:5%;
+	}
+}
+
+@keyframes moveBack {
+	from {
+		left:8%;
+	}
+	to {
+		left:5%;
+	}
+}
+
+.page-right {
+	-webkit-transform: translateX(100%);
+	transform: translateX(100%);
+	background-image: url('https://farm8.staticflickr.com/7429/11164720986_c0ede657bb_o.jpg');
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+
+/* Toutes les transitions */
+
+.side,
+.page-right {
+	-webkit-transition: -webkit-transform 0.6s;
+	transition: transform 0.6s;
+}
+
+.intro-content {
+	-webkit-transition: -webkit-transform 0.6s, top 0.6s;
+	transition: transform 0.6s, top 0.6s;
+}
+
+.intro-content h1,
+.back {
+	-webkit-transition: opacity 0.3s;
+	transition: opacity 0.3s;
+}
+
+
+/* Open and close */
+
+.reset-layout .page {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 40px;
+}
+
+.splitlayout.open-right .page-right {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: 1500;
+	top: 40px;
+	-webkit-transform: translateX(0%);
+	transform: translateX(0%);
+	left:0%;
+}
+
+
+.splitlayout.close-right .page-right {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 40px;
+	-webkit-transform: translateX(100%);
+	transform: translateX(100%);
+}
+
+
+/*Ouverture volet droit */
+
+.open-right .side-right {
+	z-index: 200;
+	-webkit-transform: translateX(-150%);
+	transform: translateX(-150%);
+}
+
+/* Gestion bootstrap */
+
+.btn:hover,.list-group-item:hover {
+	color: indianred !important;
+}
+
+.modal-footer {
+	margin: auto;
+}
+
+.btn-group-vertical {
+	width: 50%;
+	height: 100%;
+	margin-left: 25%;
+}
+
+.modal-body {
+	height: 100%;
+	width: 100%;
+}
+
+.carousel.slide {
+	width: 100%;
+	height: 100%;
+}
+
+.d-block {
+	height: 350px;
+	width: 100% !important;
+}

@@ -1,0 +1,130 @@
+
+.timeline {
+	margin: 30px 0 0 0;
+	padding: 0;
+	list-style: none;
+	position: relative;
+} 
+
+/* The line */
+.timeline:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 10px;
+	background: #9d9fa4;
+	left: 20%;
+	margin-left: -10px;
+}
+
+/* The date*/
+.timeline > li .date {
+	display: block;
+	padding-right: 100px;
+	position: absolute;
+}
+
+.timeline > li .date span {
+	display: block;
+	text-align: left;
+}
+
+
+.timeline > li .date span:last-child {
+	font-size: 1.3em;
+	color: #3594cb;
+}
+
+.timeline > li:nth-child(odd) .date span:last-child {
+	/* color: #6cbfee; */
+}
+
+/* Right content */
+.timeline > li .label {
+	margin: 0 20% 15px 25%;
+	background:#6F7175;
+	color: #fff;
+	padding: 2em;
+	/* font-size: 1.2em; */
+	font-weight: 300;
+	line-height: 1.4;
+	position: relative;
+	border-radius: 5px;
+}
+
+.timeline > li:nth-child(odd) .label {
+	/* background: #6cbfee; */
+}
+
+.timeline > li .label h2 { 
+	margin-top: 0px;
+	padding: 0 0 10px 0;
+	border-bottom: 1px solid rgba(255,255,255,0.4);
+}
+
+/* The triangle */
+.timeline > li .label:after {
+	right: 100%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-right-color: #6F7175;
+	border-width: 10px;
+	top: 10px;
+}
+
+.timeline > li:nth-child(odd) .label:after {
+	border-right-color: #6f716f;
+}
+
+
+
+/* Example Media Queries */
+@media screen and (max-width: 65.375em) {
+
+	.timeline > li .date span:last-child {
+		font-size: 1.2em;
+	}
+}
+
+@media screen and (max-width: 47.2em) {
+	.timeline:before {
+		display: none;
+	}
+
+	.timeline > li .date {
+		width: 100%;
+		position: relative;
+		padding: 0 0 20px 0;
+	}
+
+	.timeline > li .date span {
+		text-align: left;
+	}
+
+	.timeline > li .label {
+		margin: 0 0 30px 0;
+		padding: 1em;
+		font-weight: 400;
+		font-size: 90%;
+	}
+
+	.timeline > li .label:after {
+		right: auto;
+		left: 20px;
+		border-right-color: transparent;
+		border-bottom-color: #6F7175;
+		top: -20px;
+	}
+
+	.timeline > li:nth-child(odd) .label:after {
+		border-right-color: transparent;
+		border-bottom-color: #6F7175;
+	}
+
+}
+
